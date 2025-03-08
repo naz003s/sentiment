@@ -1,0 +1,26 @@
+<!-- templates/topics_index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topics</title>
+</head>
+<body>
+    <h1>Topics</h1>
+    <a href="/create_topic">Create New Topic</a>
+    <ul>
+        {% for topic in topics %}
+        <li>
+            {{ topic["Keyword"] }} - {{ topic["Classification"] }} ({{ topic["Sector"] }})
+            [ <a href="/read_topic/{{ topic.key.id }}">View</a> |
+              <a href="/update_topic/{{ topic.key.id }}">Edit</a> |
+              <a href="/delete_topic/{{ topic.key.id }}">Delete</a> ]
+        </li>
+        {% else %}
+        <li>No topics found.</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

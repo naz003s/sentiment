@@ -1,0 +1,28 @@
+<!-- templates/create_topic.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Topic</title>
+</head>
+<body>
+    <h1>Create Topic</h1>
+    <form method="POST" action="/create_topic">
+        <label>Keyword:</label>
+        <input type="text" name="Keyword" required><br><br>
+
+        <label>Classification:</label>
+        <input type="text" name="Classification" required><br><br>
+
+        <label>Sector:</label>
+        <input type="text" name="Sector" required><br><br>
+
+        <label>Weight:</label>
+        <input type="number" step="0.01" name="Weight" required><br><br>
+
+        <button type="submit">Create</button>
+    </form>
+    <br>
+    <a href="/topics">Back to Topics</a>
+</body>
+</html>
